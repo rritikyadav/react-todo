@@ -1,0 +1,75 @@
+body {
+  background-color: white !important;
+}
+
+.logincard {
+  width: 40%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 6vh;
+  align-items: center;
+  background-color: rgb(19, 46, 46);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 1rem;
+}
+.heading {
+  width: fit-content;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  align-self: center;
+}
+.username,
+.password {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  align-items: center;
+}
+.username label,
+.password label {
+  align-self: flex-start;
+}
+.username input,
+.password input {
+  text-align: center;
+  width: 90%;
+  padding: 1rem 2rem 0.2rem 2rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: rgb(19, 46, 46);
+  color: white;
+}
+#btn button {
+  padding: 0.5rem 4rem;
+  background-color: white;
+  color: rgb(19, 46, 46);
+  outline: none;
+  border: none;
+  border-radius: 3rem 0rem 3rem 0rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .logincard {
+    width: 98%;
+    gap: 6svh;
+    padding: 0.5rem 0.5rem 2rem 0.5rem;
+  }
+  .username,
+  .password {
+    width: 95%;
+    gap: 1.5svh;
+  }
+}
