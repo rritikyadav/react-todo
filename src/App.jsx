@@ -15,7 +15,7 @@ function TodoApp() {
   useEffect(() => {
     const getreq = async () => {
       try {
-        const resp = await axios.get('http://localhost:5000/todo', {
+        const resp = await axios.get('https://react-todo-server-sybc.onrender.com/todo', {
           headers: {
             Authorization: jwt_token
           }
@@ -49,7 +49,7 @@ function TodoApp() {
     }
     else {
       try {
-        const resp = await axios.post('http://localhost:5000/todo', { todo: input, completed: false }, {
+        const resp = await axios.post('https://react-todo-server-sybc.onrender.com/todo', { todo: input, completed: false }, {
           headers: {
             Authorization: jwt_token
           }
@@ -70,7 +70,7 @@ function TodoApp() {
 
   const handleDelete = async (todo) => {
     try {
-      const resp = await axios.delete(`http://localhost:5000/todo/${todo._id}`, {
+      const resp = await axios.delete(`https://react-todo-server-sybc.onrender.com/${todo._id}`, {
         headers: {
           Authorization: jwt_token
         }
@@ -89,7 +89,7 @@ function TodoApp() {
 
   const handleEdit = async (todo) => {
     try {
-      const resp = await axios.delete(`http://localhost:5000/todo/${todo._id}`, {
+      const resp = await axios.delete(`https://react-todo-server-sybc.onrender.com/todo/${todo._id}`, {
         headers: {
           Authorization: jwt_token
         }
@@ -109,7 +109,7 @@ function TodoApp() {
 
   const handleCompleted = async (todo) => {
     try {
-      const resp = await axios.put(`http://localhost:5000/todo/${todo._id}`,{}, {
+      const resp = await axios.put(`https://react-todo-server-sybc.onrender.com/todo/${todo._id}`,{}, {
         headers: {
           Authorization: jwt_token
         }

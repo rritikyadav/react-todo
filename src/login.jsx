@@ -20,7 +20,7 @@ export default function Login() {
             return alert("Enter Your Credentials")
         }
         try {
-            const recieved_token = await axios.post(`http://localhost:5000/login`, credentials);
+            const recieved_token = await axios.post(`https://react-todo-server-sybc.onrender.com/login`, credentials);
             sessionStorage.setItem("token" , recieved_token.data);
             navigate('/todo')
         } catch (err) {
